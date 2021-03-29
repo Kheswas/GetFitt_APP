@@ -1,7 +1,6 @@
 body {
-  background: #fafafa;
-  color:#333333;
-  margin-top: 5rem;
+  background-image:url("https://www.istockphoto.com/de/foto/schöne-schweizer-berge-im-frühling-gm1131616912-299697951?irgwc=1&esource=AFF_IS_IR_SP_FreeImages_246195_&asid=FreeImages&cid=IS&utm_medium=affiliate_SP&utm_source=FreeImages&clickid=zbFzWsR2ExyLTjL0M-0V7wD0UkEXCI1dEUUZ0c0&utm_term=1362605&utm_content=270499&asset_type_keyword=_");
+
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -9,25 +8,51 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bg-steel {
-  background-color: #5f788a;
+  background-image: url({{ url_for('static', filename='profile_pics/gettfitt.jpg') }});
 }
 
+
 .site-header .navbar-nav .nav-link {
-  color: #cbd5db;
+  color: #556B2F;
 }
 
 .site-header .navbar-nav .nav-link:hover {
-  color: #ffffff;
+  color: #556B2F;
 }
 
 .site-header .navbar-nav .nav-link.active {
   font-weight: 500;
 }
 
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
 #map {
-  height: 75vmin;
-  width: 75%;
-  margin: 0 auto;
+  height: 50%;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.custom-map-control-button {
+  appearance: button;
+  background-color: #fff;
+  border: 0;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  margin: 10px;
+  padding: 0 0.5em;
+  height: 40px;
+  font: 400 18px Roboto, Arial, sans-serif;
+  overflow: hidden;
+}
+.custom-map-control-button:hover {
+  background: #ebebeb;
 }
 
 
