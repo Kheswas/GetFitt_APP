@@ -1,9 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
     {% for post in posts.items %}
-       <a href="#" class = "fa fa-facebook"></a>
-       <a href="#" class = "fa fa-twitter"></a>
-       <a href="#" class = "fa fa-instagram"></a>
         <article class="media content-section">
           <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
           <div class="media-body">
@@ -27,4 +24,4 @@
         ...
       {% endif %}
     {% endfor %}
-{% endblock content %}
+    {% endblock content %}

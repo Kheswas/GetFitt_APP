@@ -1,6 +1,6 @@
 body {
   background: #fafafa;
-  color: #333333;
+  color:#333333;
   margin-top: 5rem;
 }
 
@@ -24,18 +24,31 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
 }
 
+#map {
+  height: 75vmin;
+  width: 75%;
+  margin: 0 auto;
+}
+
+
+
+
+
+
+
+
 .fa-facebook{
   background: #3B5998;
-    color: white;
+    color: black;
 }
 
 .fa-twitter {
   background: #55ACEE;
-  color: white;
+  color: black;
 }
 .fa-instagram {
   background: #125688;
-  color: white;
+  color: black;
 }
 
 
@@ -94,3 +107,7 @@ a.article-title:hover {
 .account-heading {
   font-size: 2.5rem;
 }
+
+* {box-sizing: border-box;}
+ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;}
