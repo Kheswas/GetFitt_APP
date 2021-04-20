@@ -1,7 +1,75 @@
 {% extends "layout.html" %}
 {% block content %}
-    <h1>Plan a walk or a hike</h1>
-    <div class= " content-section">
-        <div id="map"></div>
+<!DOCTYPE html>
+<body>
+
+
+  <div id="floating-panel">
+    <input onclick="clearMarkers();" type="button" value="Hide Markers" />
+    <input onclick="showMarkers();" type="button" value="Show All Markers" />
+    <input onclick="deleteMarkers();" type="button" value="Delete Markers" />
+  </div>
+    <input
+      id="pac-input"
+      class="controls"
+      type="text"
+      placeholder="Search Box"
+    />
+    <div id="map"></div>
+
+<br>
+<div class="container">
+  <br>
+
+  <h2> Your past activities: </h2>
+  <div class="media">
+    <div class="media-left">
+      <img src="static/profile_pics/default.jpg" class="media-object" style="width:45px">
     </div>
+    <div class="media-body">
+      <h4 class="media-heading">John Doe <small><i>Posted on February 19, 2016</i></small></h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <br>
+      <hr>
+
+      <!-- Nested media object -->
+      <div class="media">
+        <div class="media-left">
+          <img src="static/profile_pics/default.jpg" class="media-object" style="width:45px">
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading">John Doe <small><i>Posted on February 19, 2016</i></small></h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <br>
+          <hr>
+
+          <!-- Nested media object -->
+          <div class="media">
+            <div class="media-left">
+              <img src="static/profile_pics/default.jpg" class="media-object" style="width:45px">
+            </div>
+
+            <div class="media-body">
+              <h4 class="media-heading">John Doe <small><i>Posted on February 19, 2016</i></small></h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+<script async
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPdBg5yemjMxYfR9ndW0-d3RmxEtQ6Ui0&callback=initMap&libraries=&v=weekly">
+</script>
+</body>
 {% endblock content %}

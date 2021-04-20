@@ -1,6 +1,5 @@
 import os
 import secrets
-import json
 from PIL import Image
 from flask import render_template, url_for, flash, redirect, request, abort
 from GetFitt import app, db, bcrypt, mail
@@ -199,10 +198,3 @@ def reset_token(token):
         flash('Your password has been updated! You are now able to log in', 'success')
         return redirect(url_for('login'))
     return render_template('reset_token.html', title='Reset Password', form=form)
-
-@app.route('/getdata', methods=['GET', 'POST'])
-def getdata():
-    json_data = requests.get.args('json')
-    return json_data
-    # you can get this to get rrequest with strings and parse json
-    #put data in database or somewhere

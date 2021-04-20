@@ -6,15 +6,9 @@ from flask_login import LoginManager
 from flask_mail import Mail
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
-app.config['GOOGLE_MAPS_API_KEY']= os.environ.get('API_KEY')
-
-
-
-
-
-
+#'SQLALCHEMY_DATABASE_URI'="sqlite:///site.db"
+app.config['SECRET_KEY']= os.environ.get('SECRET_KEY')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('SQLALCHEMY_DATABASE_URI')
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
 login_manager = LoginManager(app)
@@ -28,3 +22,4 @@ app.config['MAIL_PASSWORD'] = os.environ.get('EMAIL_PASS')
 mail = Mail(app)
 
 from GetFitt import routes
+#'5791628bb0b13ce0c676dfde280ba245'
